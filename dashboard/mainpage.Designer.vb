@@ -22,15 +22,22 @@ Partial Class mainpage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mainpage))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.menu_logi = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2TileButton5 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2TileButton4 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2TileButton3 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
-        Me.Guna2TileButton1 = New Guna.UI2.WinForms.Guna2TileButton()
-        Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.btn_logistics = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.UNIT1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UNIT2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UNIT2MEZZANINEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UNIT56ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
+        Me.menu_logi.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -41,11 +48,42 @@ Partial Class mainpage
         Me.Panel1.Controls.Add(Me.Guna2TileButton4)
         Me.Panel1.Controls.Add(Me.Guna2TileButton3)
         Me.Panel1.Controls.Add(Me.Guna2TileButton2)
-        Me.Panel1.Controls.Add(Me.Guna2TileButton1)
+        Me.Panel1.Controls.Add(Me.btn_logistics)
         Me.Panel1.Location = New System.Drawing.Point(158, 182)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(798, 428)
         Me.Panel1.TabIndex = 0
+        '
+        'menu_logi
+        '
+        Me.menu_logi.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UNIT1ToolStripMenuItem, Me.UNIT2ToolStripMenuItem, Me.UNIT2MEZZANINEToolStripMenuItem, Me.UNIT56ToolStripMenuItem})
+        Me.menu_logi.Name = "menu_logi"
+        Me.menu_logi.Size = New System.Drawing.Size(226, 108)
+        '
+        'txt_search
+        '
+        Me.txt_search.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_search.Animated = True
+        Me.txt_search.AutoRoundedCorners = True
+        Me.txt_search.BorderRadius = 17
+        Me.txt_search.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_search.DefaultText = ""
+        Me.txt_search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txt_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txt_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_search.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_search.IconLeft = CType(resources.GetObject("txt_search.IconLeft"), System.Drawing.Image)
+        Me.txt_search.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.txt_search.Location = New System.Drawing.Point(404, 44)
+        Me.txt_search.Name = "txt_search"
+        Me.txt_search.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_search.PlaceholderText = "Search..."
+        Me.txt_search.SelectedText = ""
+        Me.txt_search.Size = New System.Drawing.Size(306, 36)
+        Me.txt_search.TabIndex = 0
         '
         'Guna2TileButton5
         '
@@ -115,47 +153,55 @@ Partial Class mainpage
         Me.Guna2TileButton2.TabIndex = 1
         Me.Guna2TileButton2.Text = "N/A"
         '
-        'Guna2TileButton1
+        'btn_logistics
         '
-        Me.Guna2TileButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2TileButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2TileButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2TileButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2TileButton1.FillColor = System.Drawing.Color.LightGray
-        Me.Guna2TileButton1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TileButton1.ForeColor = System.Drawing.Color.DimGray
-        Me.Guna2TileButton1.Image = CType(resources.GetObject("Guna2TileButton1.Image"), System.Drawing.Image)
-        Me.Guna2TileButton1.ImageSize = New System.Drawing.Size(64, 64)
-        Me.Guna2TileButton1.Location = New System.Drawing.Point(12, 7)
-        Me.Guna2TileButton1.Name = "Guna2TileButton1"
-        Me.Guna2TileButton1.Size = New System.Drawing.Size(150, 150)
-        Me.Guna2TileButton1.TabIndex = 0
-        Me.Guna2TileButton1.Text = "Logistics"
+        Me.btn_logistics.ContextMenuStrip = Me.menu_logi
+        Me.btn_logistics.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btn_logistics.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btn_logistics.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btn_logistics.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btn_logistics.FillColor = System.Drawing.Color.LightGray
+        Me.btn_logistics.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_logistics.ForeColor = System.Drawing.Color.DimGray
+        Me.btn_logistics.Image = CType(resources.GetObject("btn_logistics.Image"), System.Drawing.Image)
+        Me.btn_logistics.ImageSize = New System.Drawing.Size(64, 64)
+        Me.btn_logistics.Location = New System.Drawing.Point(12, 7)
+        Me.btn_logistics.Name = "btn_logistics"
+        Me.btn_logistics.Size = New System.Drawing.Size(150, 150)
+        Me.btn_logistics.TabIndex = 0
+        Me.btn_logistics.Text = "Logistics"
         '
-        'txt_search
+        'UNIT1ToolStripMenuItem
         '
-        Me.txt_search.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_search.Animated = True
-        Me.txt_search.AutoRoundedCorners = True
-        Me.txt_search.BorderRadius = 17
-        Me.txt_search.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txt_search.DefaultText = ""
-        Me.txt_search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txt_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txt_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txt_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_search.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txt_search.IconLeft = CType(resources.GetObject("txt_search.IconLeft"), System.Drawing.Image)
-        Me.txt_search.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.txt_search.Location = New System.Drawing.Point(404, 44)
-        Me.txt_search.Name = "txt_search"
-        Me.txt_search.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txt_search.PlaceholderText = "Search..."
-        Me.txt_search.SelectedText = ""
-        Me.txt_search.Size = New System.Drawing.Size(306, 36)
-        Me.txt_search.TabIndex = 0
+        Me.UNIT1ToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UNIT1ToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
+        Me.UNIT1ToolStripMenuItem.Name = "UNIT1ToolStripMenuItem"
+        Me.UNIT1ToolStripMenuItem.Size = New System.Drawing.Size(225, 26)
+        Me.UNIT1ToolStripMenuItem.Text = "UNIT 1"
+        '
+        'UNIT2ToolStripMenuItem
+        '
+        Me.UNIT2ToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UNIT2ToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
+        Me.UNIT2ToolStripMenuItem.Name = "UNIT2ToolStripMenuItem"
+        Me.UNIT2ToolStripMenuItem.Size = New System.Drawing.Size(225, 26)
+        Me.UNIT2ToolStripMenuItem.Text = "UNIT 2"
+        '
+        'UNIT2MEZZANINEToolStripMenuItem
+        '
+        Me.UNIT2MEZZANINEToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UNIT2MEZZANINEToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
+        Me.UNIT2MEZZANINEToolStripMenuItem.Name = "UNIT2MEZZANINEToolStripMenuItem"
+        Me.UNIT2MEZZANINEToolStripMenuItem.Size = New System.Drawing.Size(225, 26)
+        Me.UNIT2MEZZANINEToolStripMenuItem.Text = "UNIT 2 - MEZZANINE"
+        '
+        'UNIT56ToolStripMenuItem
+        '
+        Me.UNIT56ToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UNIT56ToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
+        Me.UNIT56ToolStripMenuItem.Name = "UNIT56ToolStripMenuItem"
+        Me.UNIT56ToolStripMenuItem.Size = New System.Drawing.Size(225, 26)
+        Me.UNIT56ToolStripMenuItem.Text = "UNIT 5 & 6"
         '
         'mainpage
         '
@@ -170,15 +216,21 @@ Partial Class mainpage
         Me.Text = "dashboard"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
+        Me.menu_logi.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Guna2TileButton1 As Guna.UI2.WinForms.Guna2TileButton
+    Friend WithEvents btn_logistics As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2TileButton5 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2TileButton4 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2TileButton3 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2TileButton2 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents txt_search As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents menu_logi As ContextMenuStrip
+    Friend WithEvents UNIT1ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UNIT2ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UNIT2MEZZANINEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UNIT56ToolStripMenuItem As ToolStripMenuItem
 End Class

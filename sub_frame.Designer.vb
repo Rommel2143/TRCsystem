@@ -36,9 +36,12 @@ Partial Class sub_frame
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdministratorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.profile_menu.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -64,9 +67,9 @@ Partial Class sub_frame
         'Panel1
         '
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 51)
+        Me.Panel1.Location = New System.Drawing.Point(0, 65)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1063, 619)
+        Me.Panel1.Size = New System.Drawing.Size(1063, 605)
         Me.Panel1.TabIndex = 5
         '
         'ToolTip1
@@ -197,12 +200,34 @@ Partial Class sub_frame
         Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(162, 30)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(0, 51)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1063, 14)
+        Me.Panel3.TabIndex = 6
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.DimGray
+        Me.Label1.Location = New System.Drawing.Point(23, -2)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(124, 17)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "TRC System / Home"
+        '
         'sub_frame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1063, 670)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -213,6 +238,8 @@ Partial Class sub_frame
         Me.Panel2.ResumeLayout(False)
         Me.profile_menu.ResumeLayout(False)
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -228,4 +255,6 @@ Partial Class sub_frame
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label1 As Label
 End Class

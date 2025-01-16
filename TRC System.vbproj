@@ -196,6 +196,12 @@
     <Compile Include="Logistics\Logistics.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Logistics\logistics_IN.Designer.vb">
+      <DependentUpon>logistics_IN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Logistics\logistics_IN.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="user_settings\manage_profiles.designer.vb">
       <DependentUpon>manage_profiles.vb</DependentUpon>
     </Compile>
@@ -270,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Logistics\Logistics.resx">
       <DependentUpon>Logistics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistics\logistics_IN.resx">
+      <DependentUpon>logistics_IN.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mainframe.resx">
       <DependentUpon>Mainframe.vb</DependentUpon>
