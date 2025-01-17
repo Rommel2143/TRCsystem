@@ -25,9 +25,9 @@ Partial Class Logistics
         Me.menustrip = New System.Windows.Forms.MenuStrip()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SectionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogisticsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OUTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.INToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menustrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,16 +52,10 @@ Partial Class Logistics
         '
         'SectionToolStripMenuItem
         '
-        Me.SectionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogisticsToolStripMenuItem, Me.OUTToolStripMenuItem})
+        Me.SectionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OUTToolStripMenuItem, Me.INToolStripMenuItem})
         Me.SectionToolStripMenuItem.Name = "SectionToolStripMenuItem"
         Me.SectionToolStripMenuItem.Size = New System.Drawing.Size(81, 24)
         Me.SectionToolStripMenuItem.Text = "Scanning"
-        '
-        'LogisticsToolStripMenuItem
-        '
-        Me.LogisticsToolStripMenuItem.Name = "LogisticsToolStripMenuItem"
-        Me.LogisticsToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
-        Me.LogisticsToolStripMenuItem.Text = "IN"
         '
         'OUTToolStripMenuItem
         '
@@ -77,6 +71,12 @@ Partial Class Logistics
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1168, 703)
         Me.Panel1.TabIndex = 2
+        '
+        'INToolStripMenuItem
+        '
+        Me.INToolStripMenuItem.Name = "INToolStripMenuItem"
+        Me.INToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.INToolStripMenuItem.Text = "IN"
         '
         'Logistics
         '
@@ -99,7 +99,7 @@ Partial Class Logistics
     Friend WithEvents menustrip As MenuStrip
     Friend WithEvents DashboardToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SectionToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LogisticsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OUTToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents INToolStripMenuItem As ToolStripMenuItem
 End Class

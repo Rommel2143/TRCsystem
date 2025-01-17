@@ -3,9 +3,7 @@
 
     End Sub
 
-    Private Sub LogisticsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MyBaseToolStripMenuItem.Click
-        show_form(logistics_IN)
-    End Sub
+
     Public Sub show_form(newForm As Form)
 
         ' Add the new form to Panel1
@@ -16,5 +14,15 @@
             .Show()
         End With
 
+    End Sub
+
+
+
+    Private Sub OUTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OUTToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub INToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles INToolStripMenuItem.Click
+        show_form(logistics_IN)
     End Sub
 End Class
