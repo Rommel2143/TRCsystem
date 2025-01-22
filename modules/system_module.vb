@@ -64,20 +64,22 @@ Module system_module
     End Sub
 
 
-    Public Sub reload(ByVal sql As String, ByVal DTG As Object)
+    Public Sub reload(ByVal sql As String, ByVal dtg As DataGridView)
         Try
-            dt = New DataTable
-            con.Close()
+            dt = New DataTable()
+            If con.State = ConnectionState.Open Then con.Close()
             con.Open()
-            Dim loadqsl As New MySqlCommand(sql, con)
-            da.SelectCommand = loadqsl
-            da.Fill(dt)
-            DTG.DataSource = dt
+
+            Using loadSql As New MySqlCommand(sql, con)
+                Using da As New MySqlDataAdapter(loadSql)
+                    da.Fill(dt)
+                    dtg.DataSource = dt
+                End Using
+            End Using
         Catch ex As Exception
-            show_error("Unable to load data.", 0)
+            show_error("Unable to load data: " & ex.Message, 0)
         Finally
-            con.Close()
-            da.Dispose()
+            If con.State = ConnectionState.Open Then con.Close()
         End Try
     End Sub
 

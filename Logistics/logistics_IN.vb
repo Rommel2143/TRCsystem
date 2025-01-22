@@ -41,7 +41,8 @@ Public Class logistics_IN
             SELECT 
                 l1.partcode, 
                 lm.partname, 
-                SUM(l1.qty) AS totalqty 
+                SUM(l1.qty) AS totalqty,
+                COUNT(l1.id) AS totalcount
             FROM 
                 logistics_u1 l1
             JOIN 
@@ -71,9 +72,10 @@ Public Class logistics_IN
                         Dim pname As String = dr.GetString("partname")
                         Dim pcode As String = dr.GetString("partcode")
                         Dim totalqty As Integer = dr.GetInt32("totalqty")
-
+                        Dim countqty As Integer = dr.GetInt32("totalcount")
                         ' Add dynamically created objects to the FlowLayoutPanel
-                        addobject_group(flow1, pname, pcode, totalqty)
+                        addobject_group(flow1, pname, pcode, totalqty, countqty)
+
                     Loop
                 End Using
             End Using

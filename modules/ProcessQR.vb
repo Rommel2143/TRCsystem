@@ -40,8 +40,6 @@ Module ProcessQR
     End Function
 
 
-
-
     Private Sub cleardata()
         QRpartcode = ""
         QRlotnumber = ""
@@ -50,26 +48,57 @@ Module ProcessQR
         QRsupplier = ""
     End Sub
 
+    Private Function CheckPartName(partcode As String) As Boolean
+        Try
+            If con.State = ConnectionState.Open Then con.Close()
+            con.Open()
+
+            Dim query As String = "SELECT id FROM `logistics_masterlist` WHERE partcode = @partcode LIMIT 1"
+            Using selectPartName As New MySqlCommand(query, con)
+                selectPartName.Parameters.AddWithValue("@partcode", partcode)
+
+                Using dr As MySqlDataReader = selectPartName.ExecuteReader()
+                    If dr.HasRows = True Then
+                        Return True
+                    Else
+
+                        show_error("Partcode Not Registered!", 1)
+                        Return False
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+
+            Return False
+        Finally
+            If con.State = ConnectionState.Open Then con.Close()
+        End Try
+    End Function
+
+
     Public Function Insert_U1(qrcode As String, batch As String) As Boolean
         cleardata()
         Try
             If ProcessQRcode(qrcode) Then
-                con.Open()
-                Dim query As String = "INSERT INTO `logistics_u1` (`qrcode`, `partcode`, `lotnumber`, `supplier`, `boxno`, `qty`, `remarks`, `batch`, `userin`, `datein`, `pcin`, `batchout`, `dateout`, `userout`, `pcout`, `status`) 
+                If CheckPartName(QRpartcode) Then
+                    con.Close()
+                    con.Open()
+                    Dim query As String = "INSERT INTO `logistics_u1` (`qrcode`, `partcode`, `lotnumber`, `supplier`, `boxno`, `qty`, `remarks`, `batch`, `userin`, `datein`, `pcin`, `batchout`, `dateout`, `userout`, `pcout`, `status`) 
                                    VALUES (@qrcode, @partcode, @lotnumber, @supplier, NULL, @qty, @remarks, @batch, @userin, CURDATE(), @pcin, NULL, NULL, NULL, NULL, 1)"
-                Dim insert As New MySqlCommand(query, con)
-                insert.Parameters.AddWithValue("@qrcode", qrcode)
-                insert.Parameters.AddWithValue("@partcode", QRpartcode)
-                insert.Parameters.AddWithValue("@lotnumber", QRlotnumber)
-                insert.Parameters.AddWithValue("@supplier", QRsupplier)
-                insert.Parameters.AddWithValue("@qty", QRqty)
-                insert.Parameters.AddWithValue("@remarks", QRremarks)
-                insert.Parameters.AddWithValue("@batch", batch)
-                insert.Parameters.AddWithValue("@userin", client.user_idno)
-                insert.Parameters.AddWithValue("@pcin", client.PC_name)
-                insert.ExecuteNonQuery()
-                Return True ' Insert successful
-            End If
+                    Dim insert As New MySqlCommand(query, con)
+                    insert.Parameters.AddWithValue("@qrcode", qrcode)
+                    insert.Parameters.AddWithValue("@partcode", QRpartcode)
+                    insert.Parameters.AddWithValue("@lotnumber", QRlotnumber)
+                    insert.Parameters.AddWithValue("@supplier", QRsupplier)
+                    insert.Parameters.AddWithValue("@qty", QRqty)
+                    insert.Parameters.AddWithValue("@remarks", QRremarks)
+                    insert.Parameters.AddWithValue("@batch", batch)
+                    insert.Parameters.AddWithValue("@userin", client.user_idno)
+                    insert.Parameters.AddWithValue("@pcin", client.PC_name)
+                    insert.ExecuteNonQuery()
+                    Return True ' Insert successful
+                End If
+                End if
         Catch ex As MySqlException When ex.Number = 1062
             show_error("Duplicate entry detected", 2)
             Return False

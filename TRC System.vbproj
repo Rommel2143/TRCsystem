@@ -202,6 +202,12 @@
     <Compile Include="Logistics\logistics_IN.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Logistics\view_records.Designer.vb">
+      <DependentUpon>view_records.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Logistics\view_records.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="modules\objects.vb" />
     <Compile Include="modules\ProcessQR.vb" />
     <Compile Include="user_settings\manage_profiles.designer.vb">
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Logistics\logistics_IN.resx">
       <DependentUpon>logistics_IN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistics\view_records.resx">
+      <DependentUpon>view_records.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mainframe.resx">
       <DependentUpon>Mainframe.vb</DependentUpon>
