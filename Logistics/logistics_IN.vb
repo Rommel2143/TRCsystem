@@ -89,4 +89,8 @@ Public Class logistics_IN
         End Try
     End Sub
 
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        view_records.Show()
+        view_records.BringToFront()
+    End Sub
 End Class
