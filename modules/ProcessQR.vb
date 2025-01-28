@@ -29,7 +29,7 @@ Module ProcessQR
             End If
         Catch ex As Exception
             ' Handle unexpected errors gracefully
-            show_error($"Error processing QR code: {ex.Message}", 1)
+            show_error("Invalid QR format!", 1)
             Return False ' Indicate failure
         Finally
             ' Ensure the database connection is properly closed
@@ -39,6 +39,33 @@ Module ProcessQR
         End Try
     End Function
 
+    Private Function ProcessQRcode_inoac(qrcode As String) As Boolean
+        Try
+            Dim parts() As String = qrcode.Trim.Split("|")
+
+            'CON 1 : QR SPLITING
+            If parts.Length >= 4 Then
+                QRpartcode = parts(1)
+                QRlotnumber = parts(2)
+                QRqty = parts(3)
+                Return True ' Indicate success
+            Else
+                ' Show an error if the QR code format is invalid
+                show_error("Invalid QR format!", 1)
+                Return False ' Indicate failure
+            End If
+
+        Catch ex As Exception
+            ' Handle unexpected errors gracefully
+            show_error("Invalid QR format!", 1)
+            Return False ' Indicate failure
+        Finally
+            ' Ensure the database connection is properly closed
+            If con IsNot Nothing AndAlso con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+        End Try
+    End Function
 
     Private Sub cleardata()
         QRpartcode = ""
@@ -63,6 +90,33 @@ Module ProcessQR
                     Else
 
                         show_error("Partcode Not Registered!", 1)
+                        Return False
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+
+            Return False
+        Finally
+            If con.State = ConnectionState.Open Then con.Close()
+        End Try
+    End Function
+
+    Private Function CheckPartName_kitting(partcode As String, type As Integer) As Boolean
+        Try
+            If con.State = ConnectionState.Open Then con.Close()
+            con.Open()
+
+            Dim query As String = "SELECT id FROM `denso_kitting_masterlist` WHERE partno = @partcode AND type= @type LIMIT 1"
+            Using selectPartName As New MySqlCommand(query, con)
+                selectPartName.Parameters.AddWithValue("@partcode", partcode)
+                selectPartName.Parameters.AddWithValue("@type", type)
+                Using dr As MySqlDataReader = selectPartName.ExecuteReader()
+                    If dr.HasRows = True Then
+                        Return True
+                    Else
+
+                        show_error("Partcode Not Registered or INVALID!", 1)
                         Return False
                     End If
                 End Using
@@ -112,5 +166,63 @@ Module ProcessQR
         End Try
         Return False
     End Function
+
+
+    Public Function Insert_kitting(qrcode As String, type As Integer) As Boolean
+        cleardata()
+        Try
+            Select Case type
+                Case 1, 2
+                    If ProcessQRcode(qrcode) Then
+                        If CheckPartName_kitting(QRpartcode, type) Then
+                            con.Close()
+                            con.Open()
+                            Dim query As String = "INSERT INTO `denso_kitting` (`qrcode`, `partno`, `qty`,`userin`, `datein`, `userout`, `dateout`, `type`) 
+                                   VALUES (@qrcode, @partcode, @qty, @userin, CURDATE(), NULL, NULL, " & type & ")"
+                            Dim insert As New MySqlCommand(query, con)
+                            insert.Parameters.AddWithValue("@qrcode", qrcode)
+                            insert.Parameters.AddWithValue("@partcode", QRpartcode)
+                            insert.Parameters.AddWithValue("@qty", QRqty)
+                            insert.Parameters.AddWithValue("@userin", client.user_idno)
+                            insert.Parameters.AddWithValue("@pcin", client.PC_name)
+                            insert.ExecuteNonQuery()
+                            Return True ' Insert successful
+                        End If
+                    End If
+                Case 3
+                    If ProcessQRcode_inoac(qrcode) Then
+
+                        con.Close()
+                        con.Open()
+                        Dim query As String = "INSERT INTO `denso_kitting` (`qrcode`, `partno`, `qty`,`userin`, `datein`, `userout`, `dateout`, `type`) 
+                                   VALUES (@qrcode, @partcode, @qty, @userin, CURDATE(), NULL, NULL, " & type & ")"
+                        Dim insert As New MySqlCommand(query, con)
+                        insert.Parameters.AddWithValue("@qrcode", qrcode)
+                        insert.Parameters.AddWithValue("@partcode", QRpartcode)
+                        insert.Parameters.AddWithValue("@qty", QRqty)
+                        insert.Parameters.AddWithValue("@userin", client.user_idno)
+                        insert.Parameters.AddWithValue("@pcin", client.PC_name)
+                        insert.ExecuteNonQuery()
+                        Return True ' Insert successful
+
+                    End If
+
+            End Select
+
+        Catch ex As MySqlException When ex.Number = 1062
+            show_error("Duplicate entry detected", 2)
+            Return False
+        Catch ex As Exception
+            show_error($"Error on saving: {ex.Message}", 1)
+            Return False
+        Finally
+            If con IsNot Nothing AndAlso con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+        End Try
+        Return False
+    End Function
+
+
 
 End Module

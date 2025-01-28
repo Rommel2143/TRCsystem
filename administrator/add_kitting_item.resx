@@ -117,35 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="annouce_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\megaphone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="duplicate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\duplicate.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="edit_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="errorsound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\errorsound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="f_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="m_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\man (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trash (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trc_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIrSURBVHhe7Zu7
+        ihRBFIbXwNtmJqaiuWuwoSj4ApqJiKiJ6Rr4LhqJPoBPoImBoHgB8e4j6KqBlwWjTw5USfkzvUz19NSU
+        8H/QSdep0+f/mB5mhum1tTkB1oEbwAvgF/0RMz1PMx7U+RcCOAK81St2zJuYWXOMAjiQGv5vvAb2a55q
+        gOvaGXgJPOjsiJmULc1TDfBYml7Qml4ALsqsj7SmGuBr0fC9rvcG8KGY94uuVwPsFA2f6HpvxIzFvDu6
+        Xo0FWIAFWIAFWIAFWIAFWIAFWIAFWIAFWICu94YFWIAFWIAFWIAFWIAFWIAFWIAFWIAFWICuV2MBFmAB
+        FjClAGAPcA64G//jS8cd4GysaX0tXQsAjgHPin7KU+Co7quhWwHABvC56DVE1BzX/fPSpYAUfrvok/md
+        DiUkbGifeehOwED4n8BlYC+wD7iSzpWMktCVgIHw8WDDmRm1J4HvUvsN2NTa3ehGQE34zBQSuhAwJnxm
+        UQkrF7BI+MwiElYqYIrwmbESViZgyvCZMRJWImAZ4TO1EpoLWGb4TI2EpgJahM/MK6GZgIHwP4DT/3aY
+        juidrlESM/z9xLgMAWE58y6dO9E6fGY3CemrdvnU2LburwZ4WDQMXs14drhJ+MyAhPguoY/33te91QDX
+        pKnSNHxmQIJyXvdVk15W97Rz4hNwSve0Iq4941bM3Nb60SQJV9PPV/FO/BG4CRzW2tYAh4Bb6d6PV0TM
+        eEnrhvgD9AvqVzHn4wUAAAAASUVORK5CYII=
+</value>
   </data>
 </root>

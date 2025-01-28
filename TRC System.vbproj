@@ -148,6 +148,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="administrator\add_kitting_item.Designer.vb">
+      <DependentUpon>add_kitting_item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="administrator\add_kitting_item.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="administrator\add_user.Designer.vb">
       <DependentUpon>add_user.vb</DependentUpon>
     </Compile>
@@ -210,6 +216,17 @@
     </Compile>
     <Compile Include="modules\objects.vb" />
     <Compile Include="modules\ProcessQR.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RETAINER\Kitting\kitting_IN.Designer.vb">
+      <DependentUpon>kitting_IN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RETAINER\Kitting\kitting_IN.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="user_settings\manage_profiles.designer.vb">
       <DependentUpon>manage_profiles.vb</DependentUpon>
     </Compile>
@@ -241,11 +258,6 @@
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -261,6 +273,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="administrator\add_kitting_item.resx">
+      <DependentUpon>add_kitting_item.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="administrator\add_user.resx">
       <DependentUpon>add_user.vb</DependentUpon>
     </EmbeddedResource>
@@ -294,14 +309,17 @@
     <EmbeddedResource Include="Mainframe.resx">
       <DependentUpon>Mainframe.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RETAINER\Kitting\kitting_IN.resx">
+      <DependentUpon>kitting_IN.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="user_settings\manage_profiles.resx">
       <DependentUpon>manage_profiles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reconnect.resx">
       <DependentUpon>reconnect.vb</DependentUpon>
@@ -333,49 +351,7 @@
     <None Include="Resources\errorsound.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\exclamation.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\info %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\interrogation.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\triangle-warning.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exclamation %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\trc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\promotion %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\promotion %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\account %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\megaphone.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\man %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\woman.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user %284%29.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -388,6 +364,27 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megaphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

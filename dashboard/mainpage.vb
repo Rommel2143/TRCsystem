@@ -18,4 +18,14 @@
     Private Sub UNIT1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UNIT1ToolStripMenuItem.Click
         display_formsub(Logistics)
     End Sub
+
+    Private Sub btn_retainer_Click(sender As Object, e As EventArgs) Handles btn_retainer.Click
+        If btn_retainer.ContextMenuStrip IsNot Nothing Then
+            btn_retainer.ContextMenuStrip.Show(btn_retainer, 0, btn_retainer.Height)
+        End If
+    End Sub
+
+    Private Sub KittingAreaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KittingAreaToolStripMenuItem.Click
+        display_formsub(kitting_IN)
+    End Sub
 End Class

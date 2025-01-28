@@ -28,7 +28,10 @@ Partial Class mainpage
         Me.Guna2TileButton5 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2TileButton4 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2TileButton3 = New Guna.UI2.WinForms.Guna2TileButton()
-        Me.Guna2TileButton2 = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.btn_retainer = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.menu_retainer = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.KittingAreaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TraceabilityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_logistics = New Guna.UI2.WinForms.Guna2TileButton()
         Me.menu_logi = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.UNIT1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -37,6 +40,7 @@ Partial Class mainpage
         Me.UNIT56ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Panel1.SuspendLayout()
+        Me.menu_retainer.SuspendLayout()
         Me.menu_logi.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,7 +51,7 @@ Partial Class mainpage
         Me.Panel1.Controls.Add(Me.Guna2TileButton5)
         Me.Panel1.Controls.Add(Me.Guna2TileButton4)
         Me.Panel1.Controls.Add(Me.Guna2TileButton3)
-        Me.Panel1.Controls.Add(Me.Guna2TileButton2)
+        Me.Panel1.Controls.Add(Me.btn_retainer)
         Me.Panel1.Controls.Add(Me.btn_logistics)
         Me.Panel1.Location = New System.Drawing.Point(158, 182)
         Me.Panel1.Name = "Panel1"
@@ -105,22 +109,45 @@ Partial Class mainpage
         Me.Guna2TileButton3.TabIndex = 2
         Me.Guna2TileButton3.Text = "N/A"
         '
-        'Guna2TileButton2
+        'btn_retainer
         '
-        Me.Guna2TileButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2TileButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2TileButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2TileButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2TileButton2.FillColor = System.Drawing.Color.LightGray
-        Me.Guna2TileButton2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2TileButton2.ForeColor = System.Drawing.Color.DimGray
-        Me.Guna2TileButton2.Image = CType(resources.GetObject("Guna2TileButton2.Image"), System.Drawing.Image)
-        Me.Guna2TileButton2.ImageSize = New System.Drawing.Size(64, 64)
-        Me.Guna2TileButton2.Location = New System.Drawing.Point(168, 7)
-        Me.Guna2TileButton2.Name = "Guna2TileButton2"
-        Me.Guna2TileButton2.Size = New System.Drawing.Size(150, 150)
-        Me.Guna2TileButton2.TabIndex = 1
-        Me.Guna2TileButton2.Text = "Retainer Assy"
+        Me.btn_retainer.ContextMenuStrip = Me.menu_retainer
+        Me.btn_retainer.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btn_retainer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btn_retainer.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btn_retainer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btn_retainer.FillColor = System.Drawing.Color.LightGray
+        Me.btn_retainer.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_retainer.ForeColor = System.Drawing.Color.DimGray
+        Me.btn_retainer.Image = CType(resources.GetObject("btn_retainer.Image"), System.Drawing.Image)
+        Me.btn_retainer.ImageSize = New System.Drawing.Size(64, 64)
+        Me.btn_retainer.Location = New System.Drawing.Point(168, 7)
+        Me.btn_retainer.Name = "btn_retainer"
+        Me.btn_retainer.Size = New System.Drawing.Size(150, 150)
+        Me.btn_retainer.TabIndex = 1
+        Me.btn_retainer.Text = "Retainer Assy"
+        '
+        'menu_retainer
+        '
+        Me.menu_retainer.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KittingAreaToolStripMenuItem, Me.TraceabilityToolStripMenuItem})
+        Me.menu_retainer.Name = "menu_logi"
+        Me.menu_retainer.Size = New System.Drawing.Size(181, 78)
+        '
+        'KittingAreaToolStripMenuItem
+        '
+        Me.KittingAreaToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.KittingAreaToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
+        Me.KittingAreaToolStripMenuItem.Name = "KittingAreaToolStripMenuItem"
+        Me.KittingAreaToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.KittingAreaToolStripMenuItem.Text = "Kitting Area"
+        '
+        'TraceabilityToolStripMenuItem
+        '
+        Me.TraceabilityToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TraceabilityToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
+        Me.TraceabilityToolStripMenuItem.Name = "TraceabilityToolStripMenuItem"
+        Me.TraceabilityToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.TraceabilityToolStripMenuItem.Text = "Traceability"
         '
         'btn_logistics
         '
@@ -216,6 +243,7 @@ Partial Class mainpage
         Me.Text = "dashboard"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
+        Me.menu_retainer.ResumeLayout(False)
         Me.menu_logi.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -226,11 +254,14 @@ Partial Class mainpage
     Friend WithEvents Guna2TileButton5 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2TileButton4 As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents Guna2TileButton3 As Guna.UI2.WinForms.Guna2TileButton
-    Friend WithEvents Guna2TileButton2 As Guna.UI2.WinForms.Guna2TileButton
+    Friend WithEvents btn_retainer As Guna.UI2.WinForms.Guna2TileButton
     Friend WithEvents txt_search As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents menu_logi As ContextMenuStrip
     Friend WithEvents UNIT1ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UNIT2ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UNIT2MEZZANINEToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UNIT56ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents menu_retainer As ContextMenuStrip
+    Friend WithEvents KittingAreaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TraceabilityToolStripMenuItem As ToolStripMenuItem
 End Class
