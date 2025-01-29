@@ -39,6 +39,8 @@ Partial Class mainpage
         Me.UNIT2MEZZANINEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UNIT56ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.PartsScanningToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QCScanningToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.menu_retainer.SuspendLayout()
         Me.menu_logi.SuspendLayout()
@@ -131,23 +133,24 @@ Partial Class mainpage
         '
         Me.menu_retainer.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KittingAreaToolStripMenuItem, Me.TraceabilityToolStripMenuItem})
         Me.menu_retainer.Name = "menu_logi"
-        Me.menu_retainer.Size = New System.Drawing.Size(181, 78)
+        Me.menu_retainer.Size = New System.Drawing.Size(194, 78)
         '
         'KittingAreaToolStripMenuItem
         '
         Me.KittingAreaToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.KittingAreaToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
         Me.KittingAreaToolStripMenuItem.Name = "KittingAreaToolStripMenuItem"
-        Me.KittingAreaToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.KittingAreaToolStripMenuItem.Size = New System.Drawing.Size(193, 26)
         Me.KittingAreaToolStripMenuItem.Text = "Kitting Area"
         '
         'TraceabilityToolStripMenuItem
         '
+        Me.TraceabilityToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PartsScanningToolStripMenuItem, Me.QCScanningToolStripMenuItem})
         Me.TraceabilityToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TraceabilityToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
         Me.TraceabilityToolStripMenuItem.Name = "TraceabilityToolStripMenuItem"
-        Me.TraceabilityToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
-        Me.TraceabilityToolStripMenuItem.Text = "Traceability"
+        Me.TraceabilityToolStripMenuItem.Size = New System.Drawing.Size(193, 26)
+        Me.TraceabilityToolStripMenuItem.Text = "Parts Traceability"
         '
         'btn_logistics
         '
@@ -230,6 +233,18 @@ Partial Class mainpage
         Me.txt_search.Size = New System.Drawing.Size(306, 36)
         Me.txt_search.TabIndex = 0
         '
+        'PartsScanningToolStripMenuItem
+        '
+        Me.PartsScanningToolStripMenuItem.Name = "PartsScanningToolStripMenuItem"
+        Me.PartsScanningToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
+        Me.PartsScanningToolStripMenuItem.Text = "Parts Scanning"
+        '
+        'QCScanningToolStripMenuItem
+        '
+        Me.QCScanningToolStripMenuItem.Name = "QCScanningToolStripMenuItem"
+        Me.QCScanningToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
+        Me.QCScanningToolStripMenuItem.Text = "QC Scanning"
+        '
         'mainpage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -264,4 +279,6 @@ Partial Class mainpage
     Friend WithEvents menu_retainer As ContextMenuStrip
     Friend WithEvents KittingAreaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TraceabilityToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PartsScanningToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QCScanningToolStripMenuItem As ToolStripMenuItem
 End Class

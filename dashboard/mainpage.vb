@@ -28,4 +28,8 @@
     Private Sub KittingAreaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KittingAreaToolStripMenuItem.Click
         display_formsub(kitting_IN)
     End Sub
+
+    Private Sub PartsScanningToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PartsScanningToolStripMenuItem.Click
+        display_formsub(parts_line)
+    End Sub
 End Class
