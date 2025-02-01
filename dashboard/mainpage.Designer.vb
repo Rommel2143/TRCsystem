@@ -32,6 +32,8 @@ Partial Class mainpage
         Me.menu_retainer = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.KittingAreaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TraceabilityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PartsScanningToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QCScanningToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_logistics = New Guna.UI2.WinForms.Guna2TileButton()
         Me.menu_logi = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.UNIT1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -39,8 +41,6 @@ Partial Class mainpage
         Me.UNIT2MEZZANINEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UNIT56ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.PartsScanningToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QCScanningToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.menu_retainer.SuspendLayout()
         Me.menu_logi.SuspendLayout()
@@ -152,6 +152,18 @@ Partial Class mainpage
         Me.TraceabilityToolStripMenuItem.Size = New System.Drawing.Size(193, 26)
         Me.TraceabilityToolStripMenuItem.Text = "Parts Traceability"
         '
+        'PartsScanningToolStripMenuItem
+        '
+        Me.PartsScanningToolStripMenuItem.Name = "PartsScanningToolStripMenuItem"
+        Me.PartsScanningToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
+        Me.PartsScanningToolStripMenuItem.Text = "Parts Scanning"
+        '
+        'QCScanningToolStripMenuItem
+        '
+        Me.QCScanningToolStripMenuItem.Name = "QCScanningToolStripMenuItem"
+        Me.QCScanningToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
+        Me.QCScanningToolStripMenuItem.Text = "QC Scanning"
+        '
         'btn_logistics
         '
         Me.btn_logistics.ContextMenuStrip = Me.menu_logi
@@ -232,18 +244,6 @@ Partial Class mainpage
         Me.txt_search.SelectedText = ""
         Me.txt_search.Size = New System.Drawing.Size(306, 36)
         Me.txt_search.TabIndex = 0
-        '
-        'PartsScanningToolStripMenuItem
-        '
-        Me.PartsScanningToolStripMenuItem.Name = "PartsScanningToolStripMenuItem"
-        Me.PartsScanningToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
-        Me.PartsScanningToolStripMenuItem.Text = "Parts Scanning"
-        '
-        'QCScanningToolStripMenuItem
-        '
-        Me.QCScanningToolStripMenuItem.Name = "QCScanningToolStripMenuItem"
-        Me.QCScanningToolStripMenuItem.Size = New System.Drawing.Size(182, 26)
-        Me.QCScanningToolStripMenuItem.Text = "QC Scanning"
         '
         'mainpage
         '

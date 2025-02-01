@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class parts_line_scan
+Partial Class qc_scanning
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,40 +25,33 @@ Partial Class parts_line_scan
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(parts_line_scan))
-        Me.lbl_line = New System.Windows.Forms.Label()
-        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(qc_scanning))
+        Me.txtqty = New Guna.UI2.WinForms.Guna2TextBox()
         Me.datagrid_bezel = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtqr = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2Panel1.SuspendLayout()
+        Me.lbl_line = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.datagrid_bezel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lbl_line
+        'txtqty
         '
-        Me.lbl_line.AutoSize = True
-        Me.lbl_line.Location = New System.Drawing.Point(43, 25)
-        Me.lbl_line.Name = "lbl_line"
-        Me.lbl_line.Size = New System.Drawing.Size(31, 13)
-        Me.lbl_line.TabIndex = 0
-        Me.lbl_line.Text = "LINE"
-        '
-        'Guna2Panel1
-        '
-        Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel1.BorderRadius = 10
-        Me.Guna2Panel1.Controls.Add(Me.datagrid_bezel)
-        Me.Guna2Panel1.Controls.Add(Me.Label1)
-        Me.Guna2Panel1.Controls.Add(Me.txtqr)
-        Me.Guna2Panel1.FillColor = System.Drawing.SystemColors.Control
-        Me.Guna2Panel1.Location = New System.Drawing.Point(46, 86)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.ShadowDecoration.BorderRadius = 12
-        Me.Guna2Panel1.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Panel1.ShadowDecoration.Enabled = True
-        Me.Guna2Panel1.Size = New System.Drawing.Size(366, 478)
-        Me.Guna2Panel1.TabIndex = 207
+        Me.txtqty.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtqty.DefaultText = ""
+        Me.txtqty.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtqty.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtqty.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtqty.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtqty.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtqty.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtqty.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtqty.Location = New System.Drawing.Point(57, 100)
+        Me.txtqty.Name = "txtqty"
+        Me.txtqty.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtqty.PlaceholderText = ""
+        Me.txtqty.SelectedText = ""
+        Me.txtqty.Size = New System.Drawing.Size(202, 69)
+        Me.txtqty.TabIndex = 0
         '
         'datagrid_bezel
         '
@@ -83,11 +76,11 @@ Partial Class parts_line_scan
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.datagrid_bezel.DefaultCellStyle = DataGridViewCellStyle3
         Me.datagrid_bezel.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.datagrid_bezel.Location = New System.Drawing.Point(36, 90)
+        Me.datagrid_bezel.Location = New System.Drawing.Point(57, 242)
         Me.datagrid_bezel.Name = "datagrid_bezel"
         Me.datagrid_bezel.RowHeadersVisible = False
-        Me.datagrid_bezel.Size = New System.Drawing.Size(295, 358)
-        Me.datagrid_bezel.TabIndex = 207
+        Me.datagrid_bezel.Size = New System.Drawing.Size(503, 358)
+        Me.datagrid_bezel.TabIndex = 209
         Me.datagrid_bezel.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.datagrid_bezel.ThemeStyle.AlternatingRowsStyle.Font = Nothing
         Me.datagrid_bezel.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
@@ -110,18 +103,6 @@ Partial Class parts_line_scan
         Me.datagrid_bezel.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.datagrid_bezel.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.DimGray
-        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(35, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 25)
-        Me.Label1.TabIndex = 206
-        Me.Label1.Text = "BEZEL"
-        '
         'txtqr
         '
         Me.txtqr.BorderRadius = 3
@@ -136,35 +117,61 @@ Partial Class parts_line_scan
         Me.txtqr.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtqr.IconLeft = CType(resources.GetObject("txtqr.IconLeft"), System.Drawing.Image)
         Me.txtqr.IconLeftSize = New System.Drawing.Size(24, 24)
-        Me.txtqr.Location = New System.Drawing.Point(36, 48)
+        Me.txtqr.Location = New System.Drawing.Point(57, 200)
         Me.txtqr.Name = "txtqr"
         Me.txtqr.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtqr.PlaceholderText = "Scan QR..."
         Me.txtqr.SelectedText = ""
-        Me.txtqr.Size = New System.Drawing.Size(295, 36)
-        Me.txtqr.TabIndex = 203
+        Me.txtqr.Size = New System.Drawing.Size(503, 36)
+        Me.txtqr.TabIndex = 208
         '
-        'parts_line_scan
+        'lbl_line
+        '
+        Me.lbl_line.AutoSize = True
+        Me.lbl_line.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_line.ForeColor = System.Drawing.Color.DimGray
+        Me.lbl_line.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbl_line.Location = New System.Drawing.Point(52, 37)
+        Me.lbl_line.Name = "lbl_line"
+        Me.lbl_line.Size = New System.Drawing.Size(47, 25)
+        Me.lbl_line.TabIndex = 210
+        Me.lbl_line.Text = "Line"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DimGray
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label2.Location = New System.Drawing.Point(54, 80)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(87, 17)
+        Me.Label2.TabIndex = 211
+        Me.Label2.Text = "Item per Box"
+        '
+        'qc_scanning
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1067, 624)
-        Me.Controls.Add(Me.Guna2Panel1)
+        Me.ClientSize = New System.Drawing.Size(1316, 711)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lbl_line)
-        Me.Name = "parts_line_scan"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "parts_line_scan"
-        Me.Guna2Panel1.ResumeLayout(False)
-        Me.Guna2Panel1.PerformLayout()
+        Me.Controls.Add(Me.datagrid_bezel)
+        Me.Controls.Add(Me.txtqr)
+        Me.Controls.Add(Me.txtqty)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "qc_scanning"
+        Me.Text = "qc_scanning"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.datagrid_bezel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents lbl_line As Label
-    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents txtqr As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtqty As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents datagrid_bezel As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents txtqr As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents lbl_line As Label
+    Friend WithEvents Label2 As Label
 End Class

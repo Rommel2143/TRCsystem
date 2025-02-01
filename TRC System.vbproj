@@ -66,6 +66,21 @@
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
+    <Reference Include="ClosedXML, Version=0.104.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.104.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.Parser.1.2.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.28.3.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.28.3\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -87,8 +102,17 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=9.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.9.1.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RBush.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -130,6 +154,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
     <Reference Include="ZstdSharp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
       <HintPath>packages\ZstdSharp.Port.0.8.1\lib\net462\ZstdSharp.dll</HintPath>
     </Reference>
@@ -214,6 +239,7 @@
     <Compile Include="Logistics\view_records.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="modules\exportExcel.vb" />
     <Compile Include="modules\objects.vb" />
     <Compile Include="modules\ProcessQR.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
@@ -227,10 +253,28 @@
     <Compile Include="RETAINER\Kitting\kitting_IN.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RETAINER\Kitting\kitting_records.Designer.vb">
+      <DependentUpon>kitting_records.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RETAINER\Kitting\kitting_records.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RETAINER\parts_trace\parts_line.Designer.vb">
       <DependentUpon>parts_line.vb</DependentUpon>
     </Compile>
     <Compile Include="RETAINER\parts_trace\parts_line.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RETAINER\parts_trace\parts_line_scan.Designer.vb">
+      <DependentUpon>parts_line_scan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RETAINER\parts_trace\parts_line_scan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RETAINER\qc_scanning\qc_scanning.Designer.vb">
+      <DependentUpon>qc_scanning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RETAINER\qc_scanning\qc_scanning.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="user_settings\manage_profiles.designer.vb">
@@ -318,8 +362,17 @@
     <EmbeddedResource Include="RETAINER\Kitting\kitting_IN.resx">
       <DependentUpon>kitting_IN.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RETAINER\Kitting\kitting_records.resx">
+      <DependentUpon>kitting_records.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RETAINER\parts_trace\parts_line.resx">
       <DependentUpon>parts_line.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RETAINER\parts_trace\parts_line_scan.resx">
+      <DependentUpon>parts_line_scan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RETAINER\qc_scanning\qc_scanning.resx">
+      <DependentUpon>qc_scanning.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_settings\manage_profiles.resx">
       <DependentUpon>manage_profiles.vb</DependentUpon>

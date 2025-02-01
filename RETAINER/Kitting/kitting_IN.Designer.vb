@@ -22,11 +22,11 @@ Partial Class kitting_IN
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(kitting_IN))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(kitting_IN))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.flow1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
@@ -34,12 +34,12 @@ Partial Class kitting_IN
         Me.cmb_type = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtqr = New Guna.UI2.WinForms.Guna2TextBox()
         Me.datagrid1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Guna2VSeparator1 = New Guna.UI2.WinForms.Guna2VSeparator()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.txtqr = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Panel1.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.datagrid1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -136,6 +136,28 @@ Partial Class kitting_IN
         Me.Label5.TabIndex = 205
         Me.Label5.Text = "QR Code"
         '
+        'txtqr
+        '
+        Me.txtqr.BorderRadius = 3
+        Me.txtqr.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtqr.DefaultText = ""
+        Me.txtqr.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtqr.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtqr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtqr.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtqr.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtqr.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtqr.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtqr.IconLeft = CType(resources.GetObject("txtqr.IconLeft"), System.Drawing.Image)
+        Me.txtqr.IconLeftSize = New System.Drawing.Size(24, 24)
+        Me.txtqr.Location = New System.Drawing.Point(54, 144)
+        Me.txtqr.Name = "txtqr"
+        Me.txtqr.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtqr.PlaceholderText = "Scan QR..."
+        Me.txtqr.SelectedText = ""
+        Me.txtqr.Size = New System.Drawing.Size(248, 36)
+        Me.txtqr.TabIndex = 203
+        '
         'datagrid1
         '
         Me.datagrid1.AllowUserToAddRows = False
@@ -218,6 +240,15 @@ Partial Class kitting_IN
         Me.Panel2.Size = New System.Drawing.Size(626, 708)
         Me.Panel2.TabIndex = 207
         '
+        'Guna2VSeparator1
+        '
+        Me.Guna2VSeparator1.BackColor = System.Drawing.Color.White
+        Me.Guna2VSeparator1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Guna2VSeparator1.Location = New System.Drawing.Point(0, 77)
+        Me.Guna2VSeparator1.Name = "Guna2VSeparator1"
+        Me.Guna2VSeparator1.Size = New System.Drawing.Size(14, 631)
+        Me.Guna2VSeparator1.TabIndex = 207
+        '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.White
@@ -227,15 +258,6 @@ Partial Class kitting_IN
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(626, 77)
         Me.Panel4.TabIndex = 206
-        '
-        'Guna2VSeparator1
-        '
-        Me.Guna2VSeparator1.BackColor = System.Drawing.Color.White
-        Me.Guna2VSeparator1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Guna2VSeparator1.Location = New System.Drawing.Point(0, 77)
-        Me.Guna2VSeparator1.Name = "Guna2VSeparator1"
-        Me.Guna2VSeparator1.Size = New System.Drawing.Size(14, 631)
-        Me.Guna2VSeparator1.TabIndex = 207
         '
         'Guna2Button1
         '
@@ -253,28 +275,6 @@ Partial Class kitting_IN
         Me.Guna2Button1.Size = New System.Drawing.Size(113, 38)
         Me.Guna2Button1.TabIndex = 0
         Me.Guna2Button1.Text = "View Records"
-        '
-        'txtqr
-        '
-        Me.txtqr.BorderRadius = 3
-        Me.txtqr.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtqr.DefaultText = ""
-        Me.txtqr.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtqr.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtqr.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtqr.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtqr.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtqr.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtqr.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtqr.IconLeft = CType(resources.GetObject("txtqr.IconLeft"), System.Drawing.Image)
-        Me.txtqr.IconLeftSize = New System.Drawing.Size(24, 24)
-        Me.txtqr.Location = New System.Drawing.Point(54, 144)
-        Me.txtqr.Name = "txtqr"
-        Me.txtqr.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtqr.PlaceholderText = "Scan QR..."
-        Me.txtqr.SelectedText = ""
-        Me.txtqr.Size = New System.Drawing.Size(248, 36)
-        Me.txtqr.TabIndex = 203
         '
         'kitting_IN
         '

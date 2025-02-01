@@ -78,4 +78,9 @@ GROUP BY
     Private Sub cmb_type_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_type.SelectedIndexChanged
 
     End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        kitting_records.ShowDialog()
+
+    End Sub
 End Class

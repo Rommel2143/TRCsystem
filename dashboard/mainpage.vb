@@ -32,4 +32,8 @@
     Private Sub PartsScanningToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PartsScanningToolStripMenuItem.Click
         display_formsub(parts_line)
     End Sub
+
+    Private Sub QCScanningToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QCScanningToolStripMenuItem.Click
+        display_formsub(qc_scanning)
+    End Sub
 End Class

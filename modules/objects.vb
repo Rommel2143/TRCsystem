@@ -112,8 +112,24 @@ Module objects
         parentPanel.Controls.Add(childPanel)
 
         ' Attach a Click event handler to the child panel
-        AddHandler childPanel.Click, AddressOf parts_line.ChildPanel_Click
+        AddHandler childPanel.Click, AddressOf ChildPanel_Click
     End Sub
 
+    Private Sub ChildPanel_Click(sender As Object, e As EventArgs)
+        ' Cast the sender to a Guna2Panel
+        Dim clickedPanel As Guna2Panel = TryCast(sender, Guna2Panel)
+
+        If clickedPanel IsNot Nothing Then
+
+            Dim lineNameLabel As Label = TryCast(clickedPanel.Controls(0), Label)
+            If lineNameLabel IsNot Nothing Then
+                Dim lineName As String = lineNameLabel.Text
+                Dim partsform As New parts_line_scan
+                partsform.loadparts(lineName)
+                partsform.ShowDialog()
+
+            End If
+        End If
+    End Sub
 
 End Module
