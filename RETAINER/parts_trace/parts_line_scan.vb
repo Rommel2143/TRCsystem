@@ -1,23 +1,30 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class parts_line_scan
 
-    Private Sub txtqr_TextChanged(sender As Object, e As EventArgs) Handles txtqr.TextChanged
+    Private Sub txtqr_TextChanged(sender As Object, e As EventArgs) Handles txtqr_bezel.TextChanged
 
     End Sub
 
-    Private Sub txtqr_KeyDown(sender As Object, e As KeyEventArgs) Handles txtqr.KeyDown
+    Private Sub txtqr_KeyDown(sender As Object, e As KeyEventArgs) Handles txtqr_bezel.KeyDown
         If e.KeyCode = Keys.Enter Then
-            saveparts(txtqr.Text.Trim, 1)
+            saveparts(txtqr_bezel.Text.Trim, 1)
 
-            txtqr.Clear()
-            txtqr.Focus()
+            txtqr_bezel.Clear()
+            txtqr_bezel.Focus()
         End If
     End Sub
 
 
     Public Sub loadparts(line As String)
         Try
-            reload("SELECT qr_id,type,qty FROM `denso_line_boxes` WHERE line='" & line & "' and type= 1", datagrid_bezel)
+
+            reload("SELECT `qr_id`,`qty` FROM `denso_line_boxes` WHERE line='" & line & "' and type = 1 and qty > 0", datagrid_bezel)
+            reload("SELECT `qr_id`,`qty` FROM `denso_line_boxes` WHERE line='" & line & "' and type = 2 and qty > 0", datagrid_retainer)
+            reload("SELECT `qr_id`,`qty` FROM `denso_line_boxes` WHERE line='" & line & "' and type = 3 and qty > 0", datagrid_tape)
+            get_total(datagrid_bezel, lbl_qtybezel)
+        get_total(datagrid_retainer, lbl_qtyretainer)
+        get_total(datagrid_tape, lbl_qtytape)
+
             lbl_line.Text = line
 
         Catch ex As Exception
@@ -26,7 +33,19 @@ Public Class parts_line_scan
             If con.State = ConnectionState.Open Then con.Close()
         End Try
     End Sub
+    Private Sub get_total(datagrid As Guna.UI2.WinForms.Guna2DataGridView, lbl As Label)
+        Dim totalQty As Integer = 0
 
+        ' Loop through each row in the DataGridView
+        For Each row As DataGridViewRow In datagrid.Rows
+            If row.Cells("qty").Value IsNot Nothing Then
+                totalQty += Convert.ToInt32(row.Cells("qty").Value)
+            End If
+        Next
+
+        ' Display totalQty in the label, formatted as a number with commas for thousands
+        lbl.Text = totalQty.ToString("N0")
+    End Sub
     Private Sub saveparts(qrcode As String, type As Integer)
         Try
             ' Validate QR code
@@ -88,8 +107,8 @@ Public Class parts_line_scan
 
 
             ' Clear and focus the QR textbox
-            txtqr.Clear()
-            txtqr.Focus()
+            txtqr_bezel.Clear()
+            txtqr_bezel.Focus()
         Catch ex As Exception
             show_error($"An error occurred: {ex.Message}", 0)
         Finally
@@ -109,11 +128,27 @@ Public Class parts_line_scan
                 Return "Unknown"
         End Select
     End Function
-    Private Sub parts_line_scan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+    Private Sub txtqr_retainer_KeyDown(sender As Object, e As KeyEventArgs) Handles txtqr_retainer.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            saveparts(txtqr_retainer.Text.Trim, 2)
+
+            txtqr_retainer.Clear()
+            txtqr_retainer.Focus()
+        End If
+    End Sub
+
+    Private Sub txtqr_tape_TextChanged(sender As Object, e As EventArgs) Handles txtqr_tape.TextChanged
 
     End Sub
 
-    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
+    Private Sub txtqr_tape_KeyDown(sender As Object, e As KeyEventArgs) Handles txtqr_tape.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            saveparts(txtqr_tape.Text.Trim, 3)
 
+            txtqr_tape.Clear()
+            txtqr_tape.Focus()
+        End If
     End Sub
 End Class
