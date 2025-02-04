@@ -50,7 +50,7 @@ Partial Class request_account
         Me.btn_request.FillColor = System.Drawing.Color.MidnightBlue
         Me.btn_request.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btn_request.ForeColor = System.Drawing.Color.White
-        Me.btn_request.Location = New System.Drawing.Point(61, 390)
+        Me.btn_request.Location = New System.Drawing.Point(82, 408)
         Me.btn_request.Name = "btn_request"
         Me.btn_request.Size = New System.Drawing.Size(129, 45)
         Me.btn_request.TabIndex = 21
@@ -249,7 +249,7 @@ Partial Class request_account
         Me.Guna2Panel1.Controls.Add(Me.txt_idno)
         Me.Guna2Panel1.Location = New System.Drawing.Point(159, 59)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(306, 452)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(306, 478)
         Me.Guna2Panel1.TabIndex = 25
         '
         'request_account

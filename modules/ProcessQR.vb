@@ -45,7 +45,7 @@ Module ProcessQR
 
             'CON 1 : QR SPLITING
             If parts.Length >= 4 Then
-                QRpartcode = parts(1)
+                QRpartcode = parts(5)
                 QRlotnumber = parts(2)
                 QRqty = parts(3)
                 Return True ' Indicate success

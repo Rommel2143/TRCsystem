@@ -75,7 +75,7 @@ Partial Class mainpage
         Me.Guna2TileButton5.Name = "Guna2TileButton5"
         Me.Guna2TileButton5.Size = New System.Drawing.Size(150, 150)
         Me.Guna2TileButton5.TabIndex = 4
-        Me.Guna2TileButton5.Text = "N/A"
+        Me.Guna2TileButton5.Text = "Rubber"
         '
         'Guna2TileButton4
         '
@@ -92,7 +92,7 @@ Partial Class mainpage
         Me.Guna2TileButton4.Name = "Guna2TileButton4"
         Me.Guna2TileButton4.Size = New System.Drawing.Size(150, 150)
         Me.Guna2TileButton4.TabIndex = 3
-        Me.Guna2TileButton4.Text = "N/A"
+        Me.Guna2TileButton4.Text = "Painting"
         '
         'Guna2TileButton3
         '
@@ -109,7 +109,7 @@ Partial Class mainpage
         Me.Guna2TileButton3.Name = "Guna2TileButton3"
         Me.Guna2TileButton3.Size = New System.Drawing.Size(150, 150)
         Me.Guna2TileButton3.TabIndex = 2
-        Me.Guna2TileButton3.Text = "N/A"
+        Me.Guna2TileButton3.Text = "Molding"
         '
         'btn_retainer
         '
@@ -133,7 +133,7 @@ Partial Class mainpage
         '
         Me.menu_retainer.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KittingAreaToolStripMenuItem, Me.TraceabilityToolStripMenuItem})
         Me.menu_retainer.Name = "menu_logi"
-        Me.menu_retainer.Size = New System.Drawing.Size(194, 78)
+        Me.menu_retainer.Size = New System.Drawing.Size(194, 56)
         '
         'KittingAreaToolStripMenuItem
         '
@@ -171,6 +171,7 @@ Partial Class mainpage
         Me.btn_logistics.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btn_logistics.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btn_logistics.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btn_logistics.Enabled = False
         Me.btn_logistics.FillColor = System.Drawing.Color.LightGray
         Me.btn_logistics.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_logistics.ForeColor = System.Drawing.Color.DimGray

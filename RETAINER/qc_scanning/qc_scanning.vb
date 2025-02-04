@@ -21,6 +21,11 @@ Public Class qc_scanning
 
     Private Sub txtqr_KeyDown(sender As Object, e As KeyEventArgs) Handles txtqr.KeyDown
         If e.KeyCode = Keys.Enter Then
+            If txtqr.Text.Trim = "" Then
+                Exit Sub
+            End If
+
+
             Try
                 If check_total() Then
 
@@ -40,6 +45,7 @@ Public Class qc_scanning
 
                     End Using
                 Else
+                    Timer1.Start()
                     show_error("No Parts available", 1)
 
                 End If
@@ -211,7 +217,7 @@ Public Class qc_scanning
 
     End Function
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
         reload_parts()
     End Sub
 
@@ -240,5 +246,27 @@ Public Class qc_scanning
     End Sub
     Private Sub txtqr_TextChanged(sender As Object, e As EventArgs) Handles txtqr.TextChanged
 
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        reload_parts()
+        If check_total() = True Then
+            Timer1.Stop()
+        Else
+
+            show_error("No Parts available", 1)
+        End If
+    End Sub
+
+    Private Sub txtqty_TextChanged(sender As Object, e As EventArgs) Handles txtqty.TextChanged
+
+    End Sub
+
+    Private Sub txtqty_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtqty.KeyPress
+        ' Allow only digits (0-9) and the backspace key
+        If Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> ControlChars.Back Then
+            ' Suppress the key press (ignore the input)
+            e.Handled = True
+        End If
     End Sub
 End Class

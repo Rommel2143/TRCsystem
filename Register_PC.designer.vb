@@ -33,6 +33,7 @@ Partial Class Register_PC
         Me.txtpassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtuser = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtpcname = New System.Windows.Forms.Label()
+        Me.txt_remarks = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,6 +44,7 @@ Partial Class Register_PC
         Me.Guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BorderRadius = 10
+        Me.Guna2Panel1.Controls.Add(Me.txt_remarks)
         Me.Guna2Panel1.Controls.Add(Me.lbl_pcinfo)
         Me.Guna2Panel1.Controls.Add(Me.cmb_loc)
         Me.Guna2Panel1.Controls.Add(Me.Guna2PictureBox2)
@@ -83,8 +85,8 @@ Partial Class Register_PC
         Me.cmb_loc.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmb_loc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmb_loc.ItemHeight = 30
-        Me.cmb_loc.Items.AddRange(New Object() {"U1", "U2", "U3", "U4", "U5", "U6", "F2", "Ext"})
-        Me.cmb_loc.Location = New System.Drawing.Point(219, 356)
+        Me.cmb_loc.Items.AddRange(New Object() {"U1", "U2", "U3", "U4", "U5", "U6", "F2", "Ext", "Retainer"})
+        Me.cmb_loc.Location = New System.Drawing.Point(219, 351)
         Me.cmb_loc.Name = "cmb_loc"
         Me.cmb_loc.Size = New System.Drawing.Size(212, 36)
         Me.cmb_loc.TabIndex = 210
@@ -135,7 +137,7 @@ Partial Class Register_PC
         Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
         Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
-        Me.Guna2Button2.Location = New System.Drawing.Point(263, 418)
+        Me.Guna2Button2.Location = New System.Drawing.Point(268, 448)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(122, 37)
         Me.Guna2Button2.TabIndex = 202
@@ -195,6 +197,27 @@ Partial Class Register_PC
         Me.txtpcname.TabIndex = 3
         Me.txtpcname.Text = "---"
         '
+        'txt_remarks
+        '
+        Me.txt_remarks.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txt_remarks.DefaultText = ""
+        Me.txt_remarks.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txt_remarks.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txt_remarks.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_remarks.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txt_remarks.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_remarks.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txt_remarks.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txt_remarks.IconLeftSize = New System.Drawing.Size(30, 30)
+        Me.txt_remarks.Location = New System.Drawing.Point(219, 393)
+        Me.txt_remarks.Name = "txt_remarks"
+        Me.txt_remarks.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_remarks.PlaceholderText = "Remarks..."
+        Me.txt_remarks.SelectedText = ""
+        Me.txt_remarks.Size = New System.Drawing.Size(212, 38)
+        Me.txt_remarks.TabIndex = 212
+        Me.txt_remarks.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Register_PC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -223,4 +246,5 @@ Partial Class Register_PC
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents lbl_pcinfo As Label
+    Friend WithEvents txt_remarks As Guna.UI2.WinForms.Guna2TextBox
 End Class

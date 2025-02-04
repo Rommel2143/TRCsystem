@@ -5,10 +5,10 @@ Public Class Register_PC
     End Sub
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
-        If txtuser.Text = "PTRCI" And txtpassword.Text = "redhorsE143" Then
+        If txtuser.Text = "PTRCI" And txtpassword.Text = "redhorsE" Then
             con.Close()
             con.Open()
-            Dim cmdselect As New MySqlCommand("INSERT INTO `trc_device`(`PCname`, `location`) VALUES ('" & client.PC_name & "','" & cmb_loc.Text & "')", con)
+            Dim cmdselect As New MySqlCommand("INSERT INTO `trc_device`(`PCname`, `location`,remarks) VALUES ('" & client.PC_name & "','" & cmb_loc.Text & "','" & txt_remarks.Text & "')", con)
             dr = cmdselect.ExecuteReader
             Mainframe.Panel1.Controls.Clear()
             display_form(New Login)

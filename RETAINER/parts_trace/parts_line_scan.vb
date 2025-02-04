@@ -151,4 +151,8 @@ Public Class parts_line_scan
             txtqr_tape.Focus()
         End If
     End Sub
+
+    Private Sub txtqr_bezel_Layout(sender As Object, e As LayoutEventArgs) Handles txtqr_bezel.Layout
+
+    End Sub
 End Class

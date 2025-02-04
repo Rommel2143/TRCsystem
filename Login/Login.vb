@@ -50,7 +50,7 @@ Public Class Login
             messageLabel.ForeColor = Color.Red
             messageLabel.AutoSize = True
 
-            messageLabel.Location = New Point(275, 345)
+            messageLabel.Location = New Point(223, 268)
             messageLabel.TextAlign = ContentAlignment.MiddleCenter
             panel_login.Controls.Add(messageLabel)
             txt_pass.Clear()
