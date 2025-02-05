@@ -238,7 +238,7 @@ Partial Class mainpage
         Me.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_search.IconLeft = CType(resources.GetObject("txt_search.IconLeft"), System.Drawing.Image)
         Me.txt_search.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.txt_search.Location = New System.Drawing.Point(404, 44)
+        Me.txt_search.Location = New System.Drawing.Point(158, 140)
         Me.txt_search.Name = "txt_search"
         Me.txt_search.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txt_search.PlaceholderText = "Search..."
