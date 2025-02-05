@@ -150,7 +150,7 @@ Partial Class sub_frame
         Me.ToolStripMenuItem1.Image = CType(resources.GetObject("ToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(188, 30)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(162, 30)
         Me.ToolStripMenuItem1.Text = "My profile"
         '
         'AdministratorToolStripMenuItem
@@ -161,7 +161,7 @@ Partial Class sub_frame
         Me.AdministratorToolStripMenuItem.Image = CType(resources.GetObject("AdministratorToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AdministratorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.AdministratorToolStripMenuItem.Name = "AdministratorToolStripMenuItem"
-        Me.AdministratorToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
+        Me.AdministratorToolStripMenuItem.Size = New System.Drawing.Size(162, 30)
         Me.AdministratorToolStripMenuItem.Text = "Administrator"
         Me.AdministratorToolStripMenuItem.Visible = False
         '
@@ -172,7 +172,7 @@ Partial Class sub_frame
         Me.LogoutToolStripMenuItem.Image = CType(resources.GetObject("LogoutToolStripMenuItem.Image"), System.Drawing.Image)
         Me.LogoutToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(162, 30)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'Guna2PictureBox1
