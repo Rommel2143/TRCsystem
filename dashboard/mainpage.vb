@@ -20,7 +20,7 @@
     End Sub
 
     Private Sub btn_retainer_Click(sender As Object, e As EventArgs) Handles btn_retainer.Click
-        If check_access("retainer") = True And PC_location = "Retainer" Then
+        If check_access_user("retainer") = True And check_access_pc("Retainer") = True Then
             btn_retainer.ContextMenuStrip.Show(btn_retainer, 0, btn_retainer.Height)
 
         End If
