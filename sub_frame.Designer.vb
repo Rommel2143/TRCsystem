@@ -31,7 +31,7 @@ Partial Class sub_frame
         Me.btn_profile = New Guna.UI2.WinForms.Guna2Button()
         Me.profile_menu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AdministratorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btn_administrator = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -138,7 +138,7 @@ Partial Class sub_frame
         '
         'profile_menu
         '
-        Me.profile_menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.AdministratorToolStripMenuItem, Me.LogoutToolStripMenuItem})
+        Me.profile_menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btn_administrator, Me.LogoutToolStripMenuItem})
         Me.profile_menu.Name = "ContextMenuStrip1"
         Me.profile_menu.Size = New System.Drawing.Size(163, 94)
         '
@@ -153,17 +153,17 @@ Partial Class sub_frame
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(162, 30)
         Me.ToolStripMenuItem1.Text = "My profile"
         '
-        'AdministratorToolStripMenuItem
+        'btn_administrator
         '
-        Me.AdministratorToolStripMenuItem.BackColor = System.Drawing.Color.MistyRose
-        Me.AdministratorToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AdministratorToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
-        Me.AdministratorToolStripMenuItem.Image = CType(resources.GetObject("AdministratorToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.AdministratorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.AdministratorToolStripMenuItem.Name = "AdministratorToolStripMenuItem"
-        Me.AdministratorToolStripMenuItem.Size = New System.Drawing.Size(162, 30)
-        Me.AdministratorToolStripMenuItem.Text = "Administrator"
-        Me.AdministratorToolStripMenuItem.Visible = False
+        Me.btn_administrator.BackColor = System.Drawing.Color.MistyRose
+        Me.btn_administrator.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_administrator.ForeColor = System.Drawing.Color.DimGray
+        Me.btn_administrator.Image = CType(resources.GetObject("btn_administrator.Image"), System.Drawing.Image)
+        Me.btn_administrator.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btn_administrator.Name = "btn_administrator"
+        Me.btn_administrator.Size = New System.Drawing.Size(162, 30)
+        Me.btn_administrator.Text = "Administrator"
+        Me.btn_administrator.Visible = False
         '
         'LogoutToolStripMenuItem
         '
@@ -227,7 +227,7 @@ Partial Class sub_frame
     Friend WithEvents Panel1 As Panel
     Friend WithEvents profile_menu As ContextMenuStrip
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents AdministratorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btn_administrator As ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button

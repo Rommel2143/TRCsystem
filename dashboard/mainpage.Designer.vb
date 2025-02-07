@@ -41,6 +41,7 @@ Partial Class mainpage
         Me.UNIT2MEZZANINEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UNIT56ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.ScanINToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.menu_retainer.SuspendLayout()
         Me.menu_logi.SuspendLayout()
@@ -171,7 +172,6 @@ Partial Class mainpage
         Me.btn_logistics.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btn_logistics.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btn_logistics.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btn_logistics.Enabled = False
         Me.btn_logistics.FillColor = System.Drawing.Color.LightGray
         Me.btn_logistics.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_logistics.ForeColor = System.Drawing.Color.DimGray
@@ -191,6 +191,7 @@ Partial Class mainpage
         '
         'UNIT1ToolStripMenuItem
         '
+        Me.UNIT1ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanINToolStripMenuItem})
         Me.UNIT1ToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UNIT1ToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
         Me.UNIT1ToolStripMenuItem.Name = "UNIT1ToolStripMenuItem"
@@ -203,7 +204,7 @@ Partial Class mainpage
         Me.UNIT2ToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
         Me.UNIT2ToolStripMenuItem.Name = "UNIT2ToolStripMenuItem"
         Me.UNIT2ToolStripMenuItem.Size = New System.Drawing.Size(225, 26)
-        Me.UNIT2ToolStripMenuItem.Text = "UNIT 2"
+        Me.UNIT2ToolStripMenuItem.Text = "UNIT 2 - RESIN"
         '
         'UNIT2MEZZANINEToolStripMenuItem
         '
@@ -219,7 +220,7 @@ Partial Class mainpage
         Me.UNIT56ToolStripMenuItem.ForeColor = System.Drawing.Color.DimGray
         Me.UNIT56ToolStripMenuItem.Name = "UNIT56ToolStripMenuItem"
         Me.UNIT56ToolStripMenuItem.Size = New System.Drawing.Size(225, 26)
-        Me.UNIT56ToolStripMenuItem.Text = "UNIT 5 & 6"
+        Me.UNIT56ToolStripMenuItem.Text = "UNIT 5 - 6"
         '
         'txt_search
         '
@@ -245,6 +246,12 @@ Partial Class mainpage
         Me.txt_search.SelectedText = ""
         Me.txt_search.Size = New System.Drawing.Size(306, 36)
         Me.txt_search.TabIndex = 0
+        '
+        'ScanINToolStripMenuItem
+        '
+        Me.ScanINToolStripMenuItem.Name = "ScanINToolStripMenuItem"
+        Me.ScanINToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.ScanINToolStripMenuItem.Text = "Scan IN"
         '
         'mainpage
         '
@@ -282,4 +289,5 @@ Partial Class mainpage
     Friend WithEvents TraceabilityToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PartsScanningToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QCScanningToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ScanINToolStripMenuItem As ToolStripMenuItem
 End Class

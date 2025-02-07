@@ -239,16 +239,10 @@
     <Compile Include="Login\terms.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Logistics\Logistics.Designer.vb">
-      <DependentUpon>Logistics.vb</DependentUpon>
+    <Compile Include="Logistics\logistics_U1_IN.Designer.vb">
+      <DependentUpon>logistics_U1_IN.vb</DependentUpon>
     </Compile>
-    <Compile Include="Logistics\Logistics.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Logistics\logistics_IN.Designer.vb">
-      <DependentUpon>logistics_IN.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Logistics\logistics_IN.vb">
+    <Compile Include="Logistics\logistics_U1_IN.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Logistics\view_records.Designer.vb">
@@ -365,11 +359,8 @@
     <EmbeddedResource Include="Login\terms.resx">
       <DependentUpon>terms.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Logistics\Logistics.resx">
-      <DependentUpon>Logistics.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Logistics\logistics_IN.resx">
-      <DependentUpon>logistics_IN.vb</DependentUpon>
+    <EmbeddedResource Include="Logistics\logistics_U1_IN.resx">
+      <DependentUpon>logistics_U1_IN.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Logistics\view_records.resx">
       <DependentUpon>view_records.vb</DependentUpon>

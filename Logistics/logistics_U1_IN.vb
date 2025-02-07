@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class logistics_IN
+Public Class logistics_U1_IN
     Private Sub logistics_IN_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub

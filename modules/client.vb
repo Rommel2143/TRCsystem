@@ -54,6 +54,36 @@ Module client
         Return False
     End Function
 
+    Public Function admin_check() As Boolean
+        Dim query As String = "SELECT level FROM trc_user WHERE IDno = @idno"
+
+        Try
+            con.Close()
+            con.Open()
+            Using getdata As New MySqlCommand(query, con)
+                getdata.Parameters.AddWithValue("@idno", user_idno)
+
+                Using reader As MySqlDataReader = getdata.ExecuteReader()
+                    If reader.Read() Then
+                        If reader.GetInt32(0) = 0 Then
+                            Return True ' User has access
+                        End If
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+
+        Finally
+            If con.State = ConnectionState.Open Then con.Close()
+        End Try
+
+
+        Return False
+    End Function
+
+
+
+
     Public Function check_access_pc(location As String) As Boolean
         Dim query As String = "SELECT id FROM trc_device WHERE PCname = '" & PC_name & "' and location='" & location & "'"
 

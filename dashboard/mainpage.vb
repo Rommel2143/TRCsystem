@@ -9,14 +9,14 @@
 
     Private Sub Guna2TileButton1_Click(sender As Object, e As EventArgs) Handles btn_logistics.Click
 
-        If btn_logistics.ContextMenuStrip IsNot Nothing Then
+        If check_access_user("logistics") = True Then
             btn_logistics.ContextMenuStrip.Show(btn_logistics, 0, btn_logistics.Height)
         End If
 
     End Sub
 
     Private Sub UNIT1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UNIT1ToolStripMenuItem.Click
-        display_formsub(Logistics)
+
     End Sub
 
     Private Sub btn_retainer_Click(sender As Object, e As EventArgs) Handles btn_retainer.Click
@@ -36,5 +36,9 @@
 
     Private Sub QCScanningToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QCScanningToolStripMenuItem.Click
         display_formsub(qc_scanning)
+    End Sub
+
+    Private Sub ScanINToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ScanINToolStripMenuItem.Click
+        display_formsub(logistics_U1_IN)
     End Sub
 End Class

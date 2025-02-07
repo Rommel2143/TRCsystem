@@ -9,8 +9,11 @@
         Else
             If btn_profile.ContextMenuStrip IsNot Nothing Then
                 btn_profile.ContextMenuStrip.Show(btn_profile, 0, btn_profile.Height)
+
+                btn_administrator.Visible = admin_check()
+
             End If
-        End If
+            End If
 
     End Sub
 
@@ -22,7 +25,7 @@
         logout_user()
     End Sub
 
-    Private Sub AdministratorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministratorToolStripMenuItem.Click
+    Private Sub AdministratorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btn_administrator.Click
         display_formsub(admin_acess)
     End Sub
 
