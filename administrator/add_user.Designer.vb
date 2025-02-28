@@ -43,12 +43,15 @@ Partial Class add_user
         Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.datagrid_user = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.txt_search = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
         Me.panel_user.SuspendLayout()
         CType(Me.datagrid_user, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'txt_idno
@@ -262,13 +265,13 @@ Partial Class add_user
         'datagrid_user
         '
         Me.datagrid_user.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.datagrid_user.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.datagrid_user.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.datagrid_user.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -287,8 +290,9 @@ Partial Class add_user
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.datagrid_user.DefaultCellStyle = DataGridViewCellStyle3
+        Me.datagrid_user.Dock = System.Windows.Forms.DockStyle.Fill
         Me.datagrid_user.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.datagrid_user.Location = New System.Drawing.Point(18, 76)
+        Me.datagrid_user.Location = New System.Drawing.Point(0, 68)
         Me.datagrid_user.Name = "datagrid_user"
         Me.datagrid_user.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -301,7 +305,7 @@ Partial Class add_user
         Me.datagrid_user.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.datagrid_user.RowHeadersVisible = False
         Me.datagrid_user.RowTemplate.Height = 33
-        Me.datagrid_user.Size = New System.Drawing.Size(718, 493)
+        Me.datagrid_user.Size = New System.Drawing.Size(800, 538)
         Me.datagrid_user.TabIndex = 12
         Me.datagrid_user.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.datagrid_user.ThemeStyle.AlternatingRowsStyle.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -328,9 +332,8 @@ Partial Class add_user
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Guna2Button2)
         Me.Panel1.Controls.Add(Me.datagrid_user)
-        Me.Panel1.Controls.Add(Me.txt_search)
+        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(306, 0)
@@ -350,7 +353,7 @@ Partial Class add_user
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
         Me.Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), System.Drawing.Image)
         Me.Guna2Button2.ImageSize = New System.Drawing.Size(32, 32)
-        Me.Guna2Button2.Location = New System.Drawing.Point(330, 34)
+        Me.Guna2Button2.Location = New System.Drawing.Point(314, 26)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(36, 36)
         Me.Guna2Button2.TabIndex = 11
@@ -372,13 +375,41 @@ Partial Class add_user
         Me.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txt_search.IconLeft = CType(resources.GetObject("txt_search.IconLeft"), System.Drawing.Image)
         Me.txt_search.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.txt_search.Location = New System.Drawing.Point(18, 34)
+        Me.txt_search.Location = New System.Drawing.Point(2, 26)
         Me.txt_search.Name = "txt_search"
         Me.txt_search.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txt_search.PlaceholderText = "Search..."
         Me.txt_search.SelectedText = ""
         Me.txt_search.Size = New System.Drawing.Size(306, 36)
         Me.txt_search.TabIndex = 1
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.Guna2Button4)
+        Me.Panel2.Controls.Add(Me.Guna2Button2)
+        Me.Panel2.Controls.Add(Me.txt_search)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(800, 68)
+        Me.Panel2.TabIndex = 13
+        '
+        'Guna2Button4
+        '
+        Me.Guna2Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2Button4.BorderRadius = 3
+        Me.Guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button4.FillColor = System.Drawing.Color.MidnightBlue
+        Me.Guna2Button4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button4.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button4.Location = New System.Drawing.Point(688, 26)
+        Me.Guna2Button4.Name = "Guna2Button4"
+        Me.Guna2Button4.Size = New System.Drawing.Size(100, 36)
+        Me.Guna2Button4.TabIndex = 14
+        Me.Guna2Button4.Text = "Save Changes"
         '
         'add_user
         '
@@ -395,6 +426,7 @@ Partial Class add_user
         Me.panel_user.PerformLayout()
         CType(Me.datagrid_user, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -417,4 +449,6 @@ Partial Class add_user
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Guna2Button4 As Guna.UI2.WinForms.Guna2Button
 End Class

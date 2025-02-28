@@ -25,17 +25,17 @@ Partial Class sub_frame
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(sub_frame))
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.profile_menu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_profile = New Guna.UI2.WinForms.Guna2Button()
-        Me.profile_menu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_administrator = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel2.SuspendLayout()
         Me.profile_menu.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,6 +54,23 @@ Partial Class sub_frame
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1063, 51)
         Me.Panel2.TabIndex = 3
+        '
+        'profile_menu
+        '
+        Me.profile_menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btn_administrator, Me.LogoutToolStripMenuItem})
+        Me.profile_menu.Name = "ContextMenuStrip1"
+        Me.profile_menu.Size = New System.Drawing.Size(163, 94)
+        '
+        'Panel1
+        '
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 51)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1063, 619)
+        Me.Panel1.TabIndex = 5
+        '
+        'ToolTip1
+        '
         '
         'Guna2Button1
         '
@@ -136,11 +153,18 @@ Partial Class sub_frame
         Me.ToolTip1.SetToolTip(Me.btn_profile, "Profile")
         Me.btn_profile.UseTransparentBackground = True
         '
-        'profile_menu
+        'Guna2PictureBox1
         '
-        Me.profile_menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.btn_administrator, Me.LogoutToolStripMenuItem})
-        Me.profile_menu.Name = "ContextMenuStrip1"
-        Me.profile_menu.Size = New System.Drawing.Size(163, 94)
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = Global.TRC_System.My.Resources.Resources.trc_logo
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(12, 6)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(63, 42)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 0
+        Me.Guna2PictureBox1.TabStop = False
+        Me.Guna2PictureBox1.UseTransparentBackground = True
         '
         'ToolStripMenuItem1
         '
@@ -174,30 +198,6 @@ Partial Class sub_frame
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
         Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(162, 30)
         Me.LogoutToolStripMenuItem.Text = "Logout"
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = Global.TRC_System.My.Resources.Resources.trc_logo
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(12, 6)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(63, 42)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 0
-        Me.Guna2PictureBox1.TabStop = False
-        Me.Guna2PictureBox1.UseTransparentBackground = True
-        '
-        'Panel1
-        '
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 51)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1063, 619)
-        Me.Panel1.TabIndex = 5
-        '
-        'ToolTip1
-        '
         '
         'sub_frame
         '

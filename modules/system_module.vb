@@ -4,7 +4,7 @@ Module system_module
 
     Public Function connection() As MySqlConnection
         Return New MySqlConnection("server=PTI-027s;user id=Inventory;password=inventory123@;database=trcsystem")
-        '  Return New MySqlConnection("server=localhost;user id=momel;password=Magnaye2143@#;database=trcsystem")
+        'Return New MySqlConnection("server=localhost;user id=root;password=;database=trcsystem")
     End Function
     Public con As MySqlConnection = connection()
     Public da As New MySqlDataAdapter

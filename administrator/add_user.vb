@@ -1,11 +1,34 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class add_user
     Private Sub add_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        reload("SELECT `id`, `IDno`, CONCAT(`last`, ', ', `firstname`) as Fullname, `section`, `level` FROM `trc_user` ORDER BY last ASC", datagrid_user)
+        loadusers()
+        cmb_display("SELECT CONCAT(id, ': ', section_name) AS display_value FROM trc_section", cmb_section)
+    End Sub
+
+    Private Sub loadusers()
+        reload("SELECT `id`, `IDno`, CONCAT(`last`, ', ', `firstname`) as Fullname, `section`, `level`,retainer, logistics, ITadmin FROM `trc_user` ORDER BY last ASC", datagrid_user)
         If datagrid_user.Columns.Contains("id") Then
             datagrid_user.Columns("id").Visible = False
         End If
-        cmb_display("SELECT CONCAT(id, ': ', section_name) AS display_value FROM trc_section", cmb_section)
+
+        For Each colName As String In {"retainer", "logistics", "ITadmin"}
+            If datagrid_user.Columns.Contains(colName) Then
+                Dim chkColumn As New DataGridViewCheckBoxColumn()
+                With chkColumn
+                    .HeaderText = colName
+                    .Name = colName
+                    .DataPropertyName = colName
+                    .TrueValue = 1
+                    .FalseValue = 0
+                    .ThreeState = False
+                End With
+
+                ' Replace existing column with CheckBox column
+                Dim index As Integer = datagrid_user.Columns(colName).Index
+                datagrid_user.Columns.Remove(colName)
+                datagrid_user.Columns.Insert(index, chkColumn)
+            End If
+        Next
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
@@ -77,6 +100,46 @@ Public Class add_user
     End Sub
 
     Private Sub panel_user_Paint(sender As Object, e As PaintEventArgs) Handles panel_user.Paint
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
+        Try
+            If con.State = ConnectionState.Open Then con.Close()
+            con.Open()
+
+            For Each row As DataGridViewRow In datagrid_user.Rows
+                If Not row.IsNewRow Then
+                    Dim id As Integer = Convert.ToInt32(row.Cells("id").Value)
+                    Dim retainer As Integer = If(Convert.ToBoolean(row.Cells("retainer").Value), 1, 0)
+                    Dim logistics As Integer = If(Convert.ToBoolean(row.Cells("logistics").Value), 1, 0)
+                    Dim ITadmin As Integer = If(Convert.ToBoolean(row.Cells("ITadmin").Value), 1, 0)
+
+                    Dim query As String = "UPDATE trc_user SET retainer=@retainer, logistics=@logistics, ITadmin=@ITadmin WHERE id=@id"
+
+                    Using cmd As New MySqlCommand(query, con)
+                        cmd.Parameters.AddWithValue("@retainer", retainer)
+                        cmd.Parameters.AddWithValue("@logistics", logistics)
+                        cmd.Parameters.AddWithValue("@ITadmin", ITadmin)
+                        cmd.Parameters.AddWithValue("@id", id)
+                        cmd.ExecuteNonQuery()
+                    End Using
+                End If
+            Next
+
+            show_error("Changes saved successfully!", 0)
+        Catch ex As Exception
+            show_error("Error saving changes: " & ex.Message, 0)
+        Finally
+            If con.State = ConnectionState.Open Then con.Close()
+        End Try
+    End Sub
+
+    Private Sub datagrid_user_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid_user.CellContentClick
 
     End Sub
 End Class

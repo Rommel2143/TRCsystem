@@ -460,6 +460,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="INVENTORY %285%29.ico" />
+    <None Include="Resources\trc1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
